@@ -6,6 +6,7 @@
 
 | 环境 | 说明文档 | 入口文件 |
 | --- | --- | --- |
+| Java | [JAVA.md](JAVA.md) | [java/src/main/java/dev/sbxnative/App.java](java/src/main/java/dev/sbxnative/App.java) |
 | Node.js | [NODE.md](NODE.md) | [nodejs/index.js](nodejs/index.js) |
 | Python | [PYTHON.md](PYTHON.md) | [python/app.py](python/app.py) |
 
@@ -13,12 +14,16 @@
 
 ```text
 .
+├── java/
+│   ├── pom.xml
+│   └── src/main/java/dev/sbxnative/App.java
 ├── nodejs/
 │   ├── index.js
 │   └── package.json
 ├── python/
 │   ├── app.py
 │   └── requirements.txt
+├── JAVA.md
 ├── NODE.md
 ├── PYTHON.md
 └── README.md
@@ -26,8 +31,7 @@
 
 ## 简要说明
 
-- Node.js 版本使用 `koffi` 加载 `.so` 动态库。
-- Python 版本使用 `ctypes` 加载 `.so` 动态库。
-- 两个版本均应部署在 Linux `amd64` 或 `arm64` 环境运行。
-
-详细安装、启动、环境变量和协议说明请查看对应环境文档。
+- 请先确认端口在部署平台开放并未被占用。
+- Reality 会首次生成并持久化 `keypair.properties`，后续重启会复用同一对 key。
+- HY2、TUIC、AnyTLS 会使用自签证书，客户端需要开启 `allow_insecure` 或等效选项。
+- 请在符合当地法律法规和服务商规则的前提下使用。
