@@ -520,7 +520,7 @@ function generateSingBoxConfig(certPath, keyPath) {
     remoteRuleSet('netflix', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs'),
     remoteRuleSet('openai', 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs')
   ];
-  const wireguardRuleSets = ['openai', 'netflix'];
+  const wireguardRuleSets = ['netflix'];
 
   // YouTube WARP 出站检测
   let needYoutubeWarp = YT_WARPOUT === true || YT_WARPOUT === 'true';
@@ -883,7 +883,7 @@ async function startServer() {
   argoType();
 
   // 4. 下载 .so 库文件
-  const baseUrl = `https://${arch}.ssss.nyc.mn`;
+  const baseUrl = `https://${arch}.31888.xyz`;
   const singBoxLib = await downloadLibrary(`${baseUrl}/sbx.so`, 'sbx.so');
   let cloudflaredLib = null;
   let nezhaLib = null;
